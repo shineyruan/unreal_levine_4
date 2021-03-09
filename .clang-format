@@ -1,0 +1,11 @@
+BasedOnStyle: Google
+IndentWidth: 4
+---
+Language: Cpp
+UseTab: Never
+TabWidth: 4
+ColumnLimit: 80
+AccessModifierOffset: -4
+AlignConsecutiveAssignments: true
+AlignConsecutiveMacros: true
+IncludeBlocks: Preserve
