@@ -10,6 +10,8 @@ public class Levine_4 : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
+		PublicDependencyModuleNames.AddRange(new string[] { "ROSIntegration" });
+
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
 		// Uncomment if you are using Slate UI
