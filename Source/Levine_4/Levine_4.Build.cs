@@ -10,7 +10,7 @@ public class Levine_4 : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
-		PublicDependencyModuleNames.AddRange(new string[] { "ROSIntegration", "UROSBridge", "Json", "JsonUtilities" });
+		PublicDependencyModuleNames.AddRange(new string[] { "UROSBridge", "Json", "JsonUtilities" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
