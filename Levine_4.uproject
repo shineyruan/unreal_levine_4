@@ -16,7 +16,7 @@
 	],
 	"Plugins": [
 		{
-			"Name": "ROSIntegration",
+			"Name": "UROSBridge",
 			"Enabled": true
 		}
 	]
