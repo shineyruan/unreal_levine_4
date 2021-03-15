@@ -1,3 +1,6 @@
 [submodule "Plugins/ROSIntegration"]
 	path = Plugins/ROSIntegration
 	url = git@github.com:code-iai/ROSIntegration.git
+[submodule "Plugins/UROSBridge"]
+	path = Plugins/UROSBridge
+	url = git@github.com:robcog-iai/UROSBridge.git
