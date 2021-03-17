@@ -16,5 +16,7 @@ class LEVINE_4_API UCSVSaver : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 
     UFUNCTION(BlueprintCallable)
-    static void saveToCSV(const FVector &actorLocation);
+    static bool saveToCSV(const FString& actorCategory,
+                          const FString& actorNameAndFamily,
+                          const FVector& actorLocation);
 };

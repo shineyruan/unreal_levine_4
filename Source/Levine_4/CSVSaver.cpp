@@ -7,7 +7,9 @@
 #include "Runtime/Core/Public/Misc/FileHelper.h"
 #include "Runtime/Core/Public/Misc/Paths.h"
 
-void UCSVSaver::saveToCSV(const FVector& actorLocation) {
+bool UCSVSaver::saveToCSV(const FString& actorCategory,
+                          const FString& actorNameAndFamily,
+                          const FVector& actorLocation) {
     // Get current project directory
     FString projDirectory = FPaths::ProjectDir();
     UE_LOG(LogTemp, Display, TEXT("Current Project dir: %s"), *projDirectory);
@@ -36,6 +38,7 @@ void UCSVSaver::saveToCSV(const FVector& actorLocation) {
     // Create a CSV file for logging
     FString csvPath = FPaths::Combine(csvDirectory, TEXT("actorLocation.csv"));
     FString actorLocationStr =
+        actorCategory + TEXT(",") + actorNameAndFamily + TEXT(",") +
         FString::SanitizeFloat(actorLocation.X) + TEXT(",") +
         FString::SanitizeFloat(actorLocation.Y) + TEXT(",") +
         FString::SanitizeFloat(actorLocation.Z) + TEXT("\n");
@@ -46,8 +49,10 @@ void UCSVSaver::saveToCSV(const FVector& actorLocation) {
                                       &IFileManager::Get(), FILEWRITE_Append)) {
         // save successful
         UE_LOG(LogTemp, Warning, TEXT("Actor location save complete!"));
+        return true;
     } else {
         // save failed
         UE_LOG(LogTemp, Error, TEXT("Actor location save failed."));
+        return false;
     }
 }
